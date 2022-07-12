@@ -123,7 +123,9 @@ ALTER SEQUENCE public.moon_moon_id_seq OWNED BY public.moon.moon_id;
 CREATE TABLE public.planet (
     planet_id integer NOT NULL,
     name character varying(30) NOT NULL,
-    star_id integer
+    star_id integer,
+    description text,
+    color text
 );
 
 
@@ -138,7 +140,8 @@ CREATE TABLE public.planet_detail (
     has_life boolean NOT NULL,
     planet_types text,
     population integer,
-    planet_id integer
+    planet_id integer,
+    name text
 );
 
 
@@ -195,7 +198,9 @@ ALTER SEQUENCE public.planet_planet_id_seq OWNED BY public.planet.planet_id;
 CREATE TABLE public.star (
     star_id integer NOT NULL,
     name character varying(50) NOT NULL,
-    galaxy_id integer
+    galaxy_id integer,
+    description text,
+    star_type numeric
 );
 
 
@@ -300,49 +305,49 @@ INSERT INTO public.moon VALUES (20, 'moon20', 200, 8);
 -- Data for Name: planet; Type: TABLE DATA; Schema: public; Owner: freecodecamp
 --
 
-INSERT INTO public.planet VALUES (1, 'Mercury', 1);
-INSERT INTO public.planet VALUES (2, 'Venus', 2);
-INSERT INTO public.planet VALUES (3, 'Earth', 3);
-INSERT INTO public.planet VALUES (4, 'Mars', 4);
-INSERT INTO public.planet VALUES (5, 'Jupiter', 5);
-INSERT INTO public.planet VALUES (6, 'Saturn', 6);
-INSERT INTO public.planet VALUES (7, 'Uranus', 1);
-INSERT INTO public.planet VALUES (8, 'Neptune', 2);
-INSERT INTO public.planet VALUES (9, 'Ceres', 3);
-INSERT INTO public.planet VALUES (10, 'Pluto', 4);
-INSERT INTO public.planet VALUES (11, 'Haumea', 5);
-INSERT INTO public.planet VALUES (12, 'Makemake', 6);
-INSERT INTO public.planet VALUES (13, 'Makemake', 6);
+INSERT INTO public.planet VALUES (1, 'Mercury', 1, NULL, NULL);
+INSERT INTO public.planet VALUES (2, 'Venus', 2, NULL, NULL);
+INSERT INTO public.planet VALUES (3, 'Earth', 3, NULL, NULL);
+INSERT INTO public.planet VALUES (4, 'Mars', 4, NULL, NULL);
+INSERT INTO public.planet VALUES (5, 'Jupiter', 5, NULL, NULL);
+INSERT INTO public.planet VALUES (6, 'Saturn', 6, NULL, NULL);
+INSERT INTO public.planet VALUES (7, 'Uranus', 1, NULL, NULL);
+INSERT INTO public.planet VALUES (8, 'Neptune', 2, NULL, NULL);
+INSERT INTO public.planet VALUES (9, 'Ceres', 3, NULL, NULL);
+INSERT INTO public.planet VALUES (10, 'Pluto', 4, NULL, NULL);
+INSERT INTO public.planet VALUES (11, 'Haumea', 5, NULL, NULL);
+INSERT INTO public.planet VALUES (12, 'Makemake', 6, NULL, NULL);
+INSERT INTO public.planet VALUES (13, 'Makemake', 6, NULL, NULL);
 
 
 --
 -- Data for Name: planet_detail; Type: TABLE DATA; Schema: public; Owner: freecodecamp
 --
 
-INSERT INTO public.planet_detail VALUES (1, false, 'cirlce', 1, 1);
-INSERT INTO public.planet_detail VALUES (2, false, 'cirlce', 1, 2);
-INSERT INTO public.planet_detail VALUES (3, false, 'cirlce3', 1, 3);
-INSERT INTO public.planet_detail VALUES (4, false, 'cirlce4', 1, 4);
-INSERT INTO public.planet_detail VALUES (5, false, 'cirlce5', 1, 5);
-INSERT INTO public.planet_detail VALUES (6, false, 'cirlce6', 1, 6);
-INSERT INTO public.planet_detail VALUES (7, false, 'cirlce7', 1, 7);
-INSERT INTO public.planet_detail VALUES (8, false, 'cirlce8', 1, 8);
-INSERT INTO public.planet_detail VALUES (9, false, 'cirlce9', 1, 9);
-INSERT INTO public.planet_detail VALUES (10, false, 'cirlce10', 1, 10);
-INSERT INTO public.planet_detail VALUES (11, false, 'cirlce11', 1, 11);
-INSERT INTO public.planet_detail VALUES (12, false, 'cirlce12', 1, 12);
+INSERT INTO public.planet_detail VALUES (1, false, 'cirlce', 1, 1, NULL);
+INSERT INTO public.planet_detail VALUES (2, false, 'cirlce', 1, 2, NULL);
+INSERT INTO public.planet_detail VALUES (3, false, 'cirlce3', 1, 3, NULL);
+INSERT INTO public.planet_detail VALUES (4, false, 'cirlce4', 1, 4, NULL);
+INSERT INTO public.planet_detail VALUES (5, false, 'cirlce5', 1, 5, NULL);
+INSERT INTO public.planet_detail VALUES (6, false, 'cirlce6', 1, 6, NULL);
+INSERT INTO public.planet_detail VALUES (7, false, 'cirlce7', 1, 7, NULL);
+INSERT INTO public.planet_detail VALUES (8, false, 'cirlce8', 1, 8, NULL);
+INSERT INTO public.planet_detail VALUES (9, false, 'cirlce9', 1, 9, NULL);
+INSERT INTO public.planet_detail VALUES (10, false, 'cirlce10', 1, 10, NULL);
+INSERT INTO public.planet_detail VALUES (11, false, 'cirlce11', 1, 11, NULL);
+INSERT INTO public.planet_detail VALUES (12, false, 'cirlce12', 1, 12, NULL);
 
 
 --
 -- Data for Name: star; Type: TABLE DATA; Schema: public; Owner: freecodecamp
 --
 
-INSERT INTO public.star VALUES (1, 'lynx', 1);
-INSERT INTO public.star VALUES (2, 'eridanus', 2);
-INSERT INTO public.star VALUES (3, 'cassiopeia', 3);
-INSERT INTO public.star VALUES (4, 'Scorpius', 4);
-INSERT INTO public.star VALUES (5, 'Crux', 5);
-INSERT INTO public.star VALUES (6, 'Cancer', 6);
+INSERT INTO public.star VALUES (1, 'lynx', 1, NULL, NULL);
+INSERT INTO public.star VALUES (2, 'eridanus', 2, NULL, NULL);
+INSERT INTO public.star VALUES (3, 'cassiopeia', 3, NULL, NULL);
+INSERT INTO public.star VALUES (4, 'Scorpius', 4, NULL, NULL);
+INSERT INTO public.star VALUES (5, 'Crux', 5, NULL, NULL);
+INSERT INTO public.star VALUES (6, 'Cancer', 6, NULL, NULL);
 
 
 --
