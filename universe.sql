@@ -86,9 +86,10 @@ ALTER SEQUENCE public.galaxy_galaxy_id_seq OWNED BY public.galaxy.galaxy_id;
 
 CREATE TABLE public.moon (
     moon_id integer NOT NULL,
-    name text NOT NULL,
+    name character varying NOT NULL,
     distance_from_earth integer,
-    planet_id integer
+    planet_id integer,
+    descrition text
 );
 
 
@@ -279,26 +280,26 @@ INSERT INTO public.galaxy VALUES (6, 'butter fly', 'galaxy', true, 'virgo');
 -- Data for Name: moon; Type: TABLE DATA; Schema: public; Owner: freecodecamp
 --
 
-INSERT INTO public.moon VALUES (1, 'moon1', 100, 1);
-INSERT INTO public.moon VALUES (2, 'moon2', 100, 2);
-INSERT INTO public.moon VALUES (3, 'moon3', 100, 3);
-INSERT INTO public.moon VALUES (4, 'moon4', 100, 4);
-INSERT INTO public.moon VALUES (5, 'moon5', 100, 5);
-INSERT INTO public.moon VALUES (6, 'moon6', 100, 6);
-INSERT INTO public.moon VALUES (7, 'moon7', 100, 7);
-INSERT INTO public.moon VALUES (8, 'moon8', 100, 8);
-INSERT INTO public.moon VALUES (9, 'moon9', 100, 9);
-INSERT INTO public.moon VALUES (10, 'moon10', 100, 10);
-INSERT INTO public.moon VALUES (11, 'moon11', 100, 11);
-INSERT INTO public.moon VALUES (12, 'moon12', 100, 12);
-INSERT INTO public.moon VALUES (13, 'moon13', 100, 1);
-INSERT INTO public.moon VALUES (14, 'moon14', 200, 2);
-INSERT INTO public.moon VALUES (15, 'moon15', 200, 3);
-INSERT INTO public.moon VALUES (16, 'moon16', 200, 4);
-INSERT INTO public.moon VALUES (17, 'moon17', 200, 5);
-INSERT INTO public.moon VALUES (18, 'moon18', 200, 6);
-INSERT INTO public.moon VALUES (19, 'moon19', 200, 7);
-INSERT INTO public.moon VALUES (20, 'moon20', 200, 8);
+INSERT INTO public.moon VALUES (1, 'moon1', 100, 1, NULL);
+INSERT INTO public.moon VALUES (2, 'moon2', 100, 2, NULL);
+INSERT INTO public.moon VALUES (3, 'moon3', 100, 3, NULL);
+INSERT INTO public.moon VALUES (4, 'moon4', 100, 4, NULL);
+INSERT INTO public.moon VALUES (5, 'moon5', 100, 5, NULL);
+INSERT INTO public.moon VALUES (6, 'moon6', 100, 6, NULL);
+INSERT INTO public.moon VALUES (7, 'moon7', 100, 7, NULL);
+INSERT INTO public.moon VALUES (8, 'moon8', 100, 8, NULL);
+INSERT INTO public.moon VALUES (9, 'moon9', 100, 9, NULL);
+INSERT INTO public.moon VALUES (10, 'moon10', 100, 10, NULL);
+INSERT INTO public.moon VALUES (11, 'moon11', 100, 11, NULL);
+INSERT INTO public.moon VALUES (12, 'moon12', 100, 12, NULL);
+INSERT INTO public.moon VALUES (13, 'moon13', 100, 1, NULL);
+INSERT INTO public.moon VALUES (14, 'moon14', 200, 2, NULL);
+INSERT INTO public.moon VALUES (15, 'moon15', 200, 3, NULL);
+INSERT INTO public.moon VALUES (16, 'moon16', 200, 4, NULL);
+INSERT INTO public.moon VALUES (17, 'moon17', 200, 5, NULL);
+INSERT INTO public.moon VALUES (18, 'moon18', 200, 6, NULL);
+INSERT INTO public.moon VALUES (19, 'moon19', 200, 7, NULL);
+INSERT INTO public.moon VALUES (20, 'moon20', 200, 8, NULL);
 
 
 --
