@@ -142,7 +142,7 @@ CREATE TABLE public.planet_detail (
     planet_types text,
     population integer,
     planet_id integer,
-    name text
+    name character varying
 );
 
 
